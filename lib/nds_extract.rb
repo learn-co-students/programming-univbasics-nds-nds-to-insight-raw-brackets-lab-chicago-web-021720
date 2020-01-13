@@ -14,11 +14,13 @@ def directors_totals(nds)
   
   result = {}
   for dude in nds do
-    total_sum = 0
+    # total_sum = 0
+    result[dude[:name]] = 0
     for movie in dude[:movies] do
-      total_sum += movie[:worldwide_gross]
+      # total_sum += movie[:worldwide_gross]
+      result[dude[:name]] += movie[:worldwide_gross]
     end
-    result[dude[:name]] = total_sum
+    # result[dude[:name]] = total_sum
   end
   
   #
